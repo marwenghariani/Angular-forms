@@ -1,0 +1,35 @@
+<p>challenge 4: Reactive Forms</p>
+<form *ngIf="myform" [formGroup]="myform" (ngSubmit)="print()">
+
+    <input type="text" placeholder="name" formControlName="name"><br>
+    <div class="alert alert-danger" *ngIf="name.touched && name.hasError('required')">this input name is required</div>
+
+
+    <input type="email" name="email" formControlName="email" placeholder="write Email"><br>
+    <div class="alert alert-danger" *ngIf="email.touched && email.hasError('required')"> this input Email is required
+    </div>
+    <div class="alert alert-danger" *ngIf="email.hasError('email')"> this is not email </div>
+
+    <div formGroupName="info">
+
+
+        <input type="text" placeholder="mycart" formControlName="mycart"><br>
+        <div class="alert alert-danger" *ngIf="mycart.touched && mycart.hasError('required')">this input name is
+            required</div>
+        <input type="text" placeholder="numero" formControlName="numero"><br>
+        <div class="alert alert-danger" *ngIf="numero?.touched && numero?.hasError('required')">this input name is
+            required</div>
+        <input type="text" placeholder="date" formControlName="date"><br>
+        <div class="alert alert-danger" *ngIf="date?.touched && date?.hasError('required') ">this input name is
+            required</div>
+            <input type="text" placeholder="code" formControlName="code"><br>
+        <div class="alert alert-danger" *ngIf="code?.touched && code.hasError('required')">this input name is
+            required</div>
+    </div>
+
+
+
+    <button type="submit">AJAUTER</button>
+
+
+    <form>

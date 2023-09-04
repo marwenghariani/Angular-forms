@@ -1,0 +1,15 @@
+<h2>challenge3:TEMPLATE DRIVEN FORM</h2>
+<form #userForm="ngForm"  (ngSubmit)="print(userForm)">
+
+    <h6>informations générale</h6>
+Nom: <input type="text" name="first"  [(ngModel)]="first" ><br>
+<div class="alert alert-danger" *ngIf="first?.touched && first.hasError('required')">this input name is required</div>
+Email:  <input type="email" name="email" [(ngModel)]="email" ><br>
+<div class="alert alert-danger" *ngIf="email.touched && email.hasError('required')">this input email is required</div>
+
+   <h6>Informations de payement</h6>
+Type de carte:  <input type="carte"  [(ngModel)]="carte" ><br>
+Numéro carte:  <input type="numero"  [(ngModel)]="numero" ><br>
+Date expiration: <input type="text"  [(ngModel)]="date" ><br>
+<button type="submit">Ajouter</button>
+</form>

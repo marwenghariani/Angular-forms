@@ -1,0 +1,46 @@
+<h1 class="text-center text-danger"> accueil page</h1>
+<ul>
+    <li> <a href="challenge8">ch8:Http Client avec Json-Server </a></li>
+    <li><a href="challenge3">ch3:Template Driven Form</a></li>
+    <li><a href="challenge4">ch4:Reactive Forms</a></li>
+    <li><a href="challenge5">ch5:Form Array</a></li>
+</ul>
+<!--   
+<h1>REACTIVE FORM et ARRAY FORM winopapa's course</h1>
+<form [formGroup]="myform" (ngSubmit)="print()">
+
+    <input type="text" placeholder="name" formControlName="name">
+    <div class="alert alert-danger" *ngIf="name.touched && name.hasError('required')">this input name is required</div>
+    <div class="alert alert-danger" *ngIf="name.hasError('minlength')"> minimum 5 characters </div>
+
+    <input type="number" placeholder="age" formControlName="age">
+    <div class="alert alert-danger" *ngIf="age.touched && age.hasError('required') ">this input age is required</div>
+
+    <input type="email" name="email" formControlName="email" placeholder="write Email">
+    <div class="alert alert-danger" *ngIf="email.touched && email.hasError('required')"> this input Email is required
+    </div>
+    <div class="alert alert-danger" *ngIf="email.hasError('email')"> this is not email </div>
+
+    <div formArrayName="details">
+        <div *ngFor="let item of myform.controls.details['controls']; index as i" [formGroupName]="i">
+            <input type="text" formControlName="id">
+            <input type="text" formControlName="title">
+            <button (click)="delete(i)">DELETE ROWS</button>
+        </div>
+        <button (click)="newInput()">add new</button>
+    </div>
+    <button type="submit">AJAUTER</button>
+    <form>
+        -->
+
+
+ <!--      
+    <h1>Template Driven Forms winopapa's course </h1>
+ <form #f="ngForm" (ngSubmit)="add(f)">
+    <input type="text" name="firstname" placeholder="firstname" [(ngModel)]="firstname">
+    <input type="text" name="lastname" placeholder="lastname" [(ngModel)]="lastname">
+    <input type="number" name="age" placeholder="age" [(ngModel)]="type">
+    <button type="submit">SOUMETTRE</button>
+ </form>
+-->
+        <router-outlet></router-outlet>
